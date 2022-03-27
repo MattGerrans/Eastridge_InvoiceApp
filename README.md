@@ -20,6 +20,16 @@ To access the administration, set up your user name and password by running `py 
 
 Then you can access the administration pages under the `admin/` pages, which will allow you to do additional things that were not coded into the application, like delete entries.
 
+## Docker
+
+Build the Docker image with: `docker build . -t invoice_app:[tag]`
+
+Run the Docker image with: `docker run -it -p 8000:8000 invoice_app:[tag]` (eg. `docker run -it -p 8000:8000 invoice_app:0.0.1`)
+
+Then the app should be accessible via `http://127.0.0.1:8000/invoice/`
+
+The docker image is also published: `vbtmattg/challenges:latest`
+
 ## Notes
 There is sample data in the database already. This is just to make it a little easier to view things before adding any data. In a production system, the database would start out empty (or populated from some legacy system).
 
